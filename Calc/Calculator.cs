@@ -62,21 +62,25 @@ namespace Calc
             }
         }
 
+        private int c;
+
         private void Button2_Click(object sender, EventArgs e)
         {
             Clear();
 
-            if (!label1.Text.Equals("") || label1.Text.Length == 0)
+            if (!label1.Text.Equals("") || label1.Text.Length != 0)
             {
-                if (label1.Text[label1.Text.Length - 1] == ')' || label1.Text[label1.Text.Length - 1] == '0') return;
-                label1.Text += "1";
-                work += "1";
-            }
-            else if (isUno)
-            {
-                label1.Text += "1";
-                work += "1)";
-                isUno = false;
+                if (isUno)
+                {
+                    label1.Text += "1";
+                    work += "1)";
+                    isUno = false;
+                }
+                else if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
+                {
+                    label1.Text += "1";
+                    work += "1";
+                }
             }
             else
             {
@@ -88,17 +92,19 @@ namespace Calc
         private void Button3_Click(object sender, EventArgs e)
         {
             Clear();
-            if (!label1.Text.Equals(""))
+            if (!label1.Text.Equals("") || label1.Text.Length != 0)
             {
-                if (label1.Text[label1.Text.Length - 1] == ')' || label1.Text[label1.Text.Length - 1] == '0') return;
-                label1.Text += "2";
-                work += "2";
-            }
-            else if (isUno)
-            {
-                label1.Text += "2";
-                work += "2)";
-                isUno = false;
+                if (isUno)
+                {
+                    label1.Text += "2";
+                    work += "2)";
+                    isUno = false;
+                }
+                else if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
+                {
+                    label1.Text += "2";
+                    work += "2";
+                }
             }
             else
             {
@@ -110,17 +116,19 @@ namespace Calc
         private void Button4_Click(object sender, EventArgs e)
         {
             Clear();
-            if (!label1.Text.Equals(""))
+            if (!label1.Text.Equals("") || label1.Text.Length != 0)
             {
-                if (label1.Text[label1.Text.Length - 1] == ')' || label1.Text[label1.Text.Length - 1] == '0') return;
-                label1.Text += "3";
-                work += "3";
-            }
-            else if (isUno)
-            {
-                label1.Text += "3";
-                work += "3)";
-                isUno = false;
+                if (isUno)
+                {
+                    label1.Text += "3";
+                    work += "3)";
+                    isUno = false;
+                }
+                else if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
+                {
+                    label1.Text += "3";
+                    work += "3";
+                }
             }
             else
             {
@@ -132,17 +140,19 @@ namespace Calc
         private void Button5_Click(object sender, EventArgs e)
         {
             Clear();
-            if (!label1.Text.Equals(""))
+            if (!label1.Text.Equals("") || label1.Text.Length != 0)
             {
-                if (label1.Text[label1.Text.Length - 1] == ')' || label1.Text[label1.Text.Length - 1] == '0') return;
-                label1.Text += "4";
-                work += "4";
-            }
-            else if (isUno)
-            {
-                label1.Text += "4";
-                work += "4)";
-                isUno = false;
+                if (isUno)
+                {
+                    label1.Text += "4";
+                    work += "4)";
+                    isUno = false;
+                }
+                else if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
+                {
+                    label1.Text += "4";
+                    work += "4";
+                }
             }
             else
             {
@@ -154,17 +164,19 @@ namespace Calc
         private void Button6_Click(object sender, EventArgs e)
         {
             Clear();
-            if (!label1.Text.Equals(""))
+            if (!label1.Text.Equals("") || label1.Text.Length != 0)
             {
-                if (label1.Text[label1.Text.Length - 1] == ')' || label1.Text[label1.Text.Length - 1] == '0') return;
-                label1.Text += "5";
-                work += "5";
-            }
-            else if (isUno)
-            {
-                label1.Text += "5";
-                work += "5)";
-                isUno = false;
+                if (isUno)
+                {
+                    label1.Text += "5";
+                    work += "5)";
+                    isUno = false;
+                }
+                else if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
+                {
+                    label1.Text += "5";
+                    work += "5";
+                }
             }
             else
             {
@@ -176,17 +188,19 @@ namespace Calc
         private void Button7_Click(object sender, EventArgs e)
         {
             Clear();
-            if (!label1.Text.Equals(""))
+            if (!label1.Text.Equals("") || label1.Text.Length != 0)
             {
-                if (label1.Text[label1.Text.Length - 1] == ')' || label1.Text[label1.Text.Length - 1] == '0') return;
-                label1.Text += "6";
-                work += "6";
-            }
-            else if (isUno)
-            {
-                label1.Text += "6";
-                work += "6)";
-                isUno = false;
+                if (isUno)
+                {
+                    label1.Text += "6";
+                    work += "6)";
+                    isUno = false;
+                }
+                else if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
+                {
+                    label1.Text += "6";
+                    work += "6";
+                }
             }
             else
             {
@@ -198,17 +212,19 @@ namespace Calc
         private void Button8_Click(object sender, EventArgs e)
         {
             Clear();
-            if (!label1.Text.Equals(""))
+            if (!label1.Text.Equals("") || label1.Text.Length != 0)
             {
-                if (label1.Text[label1.Text.Length - 1] == ')' || label1.Text[label1.Text.Length - 1] == '0') return;
-                label1.Text += "7";
-                work += "7";
-            }
-            else if (isUno)
-            {
-                label1.Text += "7";
-                work += "7)";
-                isUno = false;
+                if (isUno)
+                {
+                    label1.Text += "7";
+                    work += "7)";
+                    isUno = false;
+                }
+                else if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
+                {
+                    label1.Text += "7";
+                    work += "7";
+                }
             }
             else
             {
@@ -232,9 +248,28 @@ namespace Calc
                 if (label1.Text[label1.Text.Length - 1] != ')' &&
                     "01234567".IndexOf(label1.Text[label1.Text.Length - 1]) == -1)
                 {
-                    label1.Text += "(";
-                    work += "(";
-                    open++;
+                    if (label1.Text[label1.Text.Length - 1] == '-' && work.Length == 3)
+                    {
+                        label1.Text += "(";
+                        work = "0-1*(";
+                        isUno = false;
+
+                        open++;
+                    }
+
+                    else if (label1.Text[label1.Text.Length - 1] == '-')
+                    {
+                        label1.Text += "(";
+                        work += "1*(";
+                        isUno = false;
+                        open++;
+                    }
+                    else
+                    {
+                        label1.Text += "(";
+                        work += "(";
+                        open++;
+                    }
                 }
             }
             else
@@ -359,11 +394,6 @@ namespace Calc
                 work += "(0-";
                 isUno = true;
             }
-
-//            else
-//            {
-//                label1.Text += "-";
-//            }
         }
 
         private void Button16_Click(object sender, EventArgs e)
