@@ -31,6 +31,7 @@ namespace Calc
                 label1.Text = "";
                 work = "";
                 isCounting = false;
+                isUno = false;
             }
         }
 
@@ -236,8 +237,11 @@ namespace Calc
         private void Button9_Click(object sender, EventArgs e)
         {
             Clear();
+            isUno = false;
             label1.Text = "";
             work = "";
+            open = 0;
+            close = 0;
         }
 
         private void Button10_Click(object sender, EventArgs e)
