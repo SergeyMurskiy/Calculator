@@ -280,15 +280,22 @@ namespace Calc
 
         private void Button16_Click(object sender, EventArgs e)
         {
-            isCounting = true;
-            try
+            if (!label1.Text.Equals(""))
             {
-                var str = Calculate(label1.Text).ToString();
-                label1.Text = str;
-            }
-            catch (Exception ex)
-            {
-                label1.Text = "Ошибка!";
+
+                if (!Check(label1.Text[label1.Text.Length - 1]))
+                {
+                    isCounting = true;
+                    try
+                    {
+                        var str = Calculate(label1.Text).ToString();
+                        label1.Text = str;
+                    }
+                    catch (Exception ex)
+                    {
+                        label1.Text = "Ошибка!";
+                    }
+                }
             }
         }
 
