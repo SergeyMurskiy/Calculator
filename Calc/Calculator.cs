@@ -18,7 +18,8 @@ namespace Calc
         }
 
         private bool isCounting = false;
-
+        private int open = 0;
+        private int close = 0;
         private void Clear()
         {
             if (isCounting)
@@ -181,11 +182,13 @@ namespace Calc
                     "01234567".IndexOf(label1.Text[label1.Text.Length - 1]) == -1)
                 {
                     label1.Text += "(";
+                    open++;
                 }
             }
             else
             {
                 label1.Text += "(";
+                open++;
             }
         }
 
@@ -197,6 +200,7 @@ namespace Calc
                 if (!Check(label1.Text[label1.Text.Length - 1]))
                 {
                     label1.Text += ")";
+                    close++;
                 }
             }
         }
@@ -206,6 +210,14 @@ namespace Calc
             Clear();
             if (label1.Text.Length != 0)
             {
+                if (label1.Text[label1.Text.Length - 1] == '(')
+                {
+                    open--;
+                }
+                if (label1.Text[label1.Text.Length - 1] == ')')
+                {
+                    close--;
+                }
                 label1.Text = label1.Text.Substring(0, label1.Text.Length - 1);
             }
         }
@@ -280,7 +292,7 @@ namespace Calc
 
         private void Button16_Click(object sender, EventArgs e)
         {
-            if (!label1.Text.Equals(""))
+            if (!label1.Text.Equals("") && open == close)
             {
 
                 if (!Check(label1.Text[label1.Text.Length - 1]))
@@ -290,10 +302,14 @@ namespace Calc
                     {
                         var str = Calculate(label1.Text).ToString();
                         label1.Text = str;
+                        open = 0;
+                        close = 0;
                     }
                     catch (Exception ex)
                     {
                         label1.Text = "Ошибка!";
+                        open = 0;
+                        close = 0;
                     }
                 }
             }
