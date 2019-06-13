@@ -199,10 +199,6 @@ namespace Calc
                     label1.Text += ")";
                 }
             }
-            else
-            {
-                label1.Text += ")";
-            }
         }
 
         private void Button12_Click(object sender, EventArgs e)
