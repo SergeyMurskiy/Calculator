@@ -23,6 +23,7 @@ namespace Calc
         private bool isUno = false;
         private int open = 0;
         private int close = 0;
+
         private void Clear()
         {
             if (isCounting)
@@ -47,7 +48,8 @@ namespace Calc
             Clear();
             if (!label1.Text.Equals(""))
             {
-                if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
+                if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 &&
+                    label1.Text[label1.Text.Length - 1] != '0')
                 {
                     label1.Text += "0";
                     work += "0";
@@ -63,7 +65,7 @@ namespace Calc
         private void Button2_Click(object sender, EventArgs e)
         {
             Clear();
-            
+
             if (!label1.Text.Equals("") || label1.Text.Length == 0)
             {
                 if (label1.Text[label1.Text.Length - 1] == ')' || label1.Text[label1.Text.Length - 1] == '0') return;
@@ -266,10 +268,12 @@ namespace Calc
                 {
                     open--;
                 }
+
                 if (label1.Text[label1.Text.Length - 1] == ')')
                 {
                     close--;
                 }
+
                 label1.Text = label1.Text.Substring(0, label1.Text.Length - 1);
                 work = work.Substring(0, work.Length - 1);
             }
@@ -280,13 +284,13 @@ namespace Calc
             Clear();
             if (!label1.Text.Equals(""))
             {
-
                 if (!Check(label1.Text[label1.Text.Length - 1]))
                 {
                     label1.Text += "*";
                     work += "*";
                 }
             }
+
 //            else
 //            {
 //                label1.Text += "*";
@@ -298,13 +302,13 @@ namespace Calc
             Clear();
             if (!label1.Text.Equals(""))
             {
-
                 if (!Check(label1.Text[label1.Text.Length - 1]))
                 {
                     label1.Text += "/";
                     work += "/";
                 }
             }
+
 //            else
 //            {
 //                label1.Text += "/";
@@ -316,13 +320,13 @@ namespace Calc
             Clear();
             if (!label1.Text.Equals(""))
             {
-
                 if (!Check(label1.Text[label1.Text.Length - 1]))
                 {
                     label1.Text += "+";
                     work += "+";
                 }
             }
+
 //            else
 //            {
 //                label1.Text += "+";
@@ -334,7 +338,6 @@ namespace Calc
             Clear();
             if (!label1.Text.Equals(""))
             {
-
                 if ("+-/*".IndexOf(label1.Text[label1.Text.Length - 1]) == -1)
                 {
                     if (label1.Text[label1.Text.Length - 1] == '(')
@@ -343,8 +346,11 @@ namespace Calc
                         work += "(0-";
                         isUno = true;
                     }
-                    label1.Text += "-";
-                    work += "-";
+                    else
+                    {
+                        label1.Text += "-";
+                        work += "-";
+                    }
                 }
             }
             else
@@ -353,6 +359,7 @@ namespace Calc
                 work += "(0-";
                 isUno = true;
             }
+
 //            else
 //            {
 //                label1.Text += "-";
@@ -363,7 +370,6 @@ namespace Calc
         {
             if (!label1.Text.Equals("") && open == close)
             {
-
                 if (!Check(label1.Text[label1.Text.Length - 1]))
                 {
                     isCounting = true;
@@ -371,6 +377,7 @@ namespace Calc
                     {
                         var str = Calculate(work).ToString();
                         label1.Text = str;
+                        work = "";
                         open = 0;
                         close = 0;
                     }
@@ -379,6 +386,7 @@ namespace Calc
                         label1.Text = "Ошибка!";
                         open = 0;
                         close = 0;
+                        work = "";
                     }
                 }
             }
