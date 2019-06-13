@@ -26,6 +26,7 @@ namespace Calc
             if (isCounting)
             {
                 label1.Text = "";
+                work = "";
                 isCounting = false;
             }
         }
@@ -449,7 +450,7 @@ namespace Calc
             if (!label1.Text.Equals(""))
             {
 
-                if (!Check(label1.Text[label1.Text.Length - 1]))
+                if ("+-/*".IndexOf(label1.Text[label1.Text.Length - 1]) == -1)
                 {
                     label1.Text += "-";
                     work += "-";
@@ -475,7 +476,7 @@ namespace Calc
                     isCounting = true;
                     try
                     {
-                        var str = Calculate(label1.Text).ToString();
+                        var str = Calculate(work).ToString();
                         label1.Text = str;
                         open = 0;
                         close = 0;
