@@ -64,7 +64,7 @@ namespace Calc
         {
             Clear();
             
-            if (!label1.Text.Equals(""))
+            if (!label1.Text.Equals("") || label1.Text.Length == 0)
             {
                 if (label1.Text[label1.Text.Length - 1] == ')' || label1.Text[label1.Text.Length - 1] == '0') return;
                 label1.Text += "1";
