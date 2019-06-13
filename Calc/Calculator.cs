@@ -237,7 +237,7 @@ namespace Calc
         {
             Clear();
             label1.Text = "";
-            work += "";
+            work = "";
         }
 
         private void Button10_Click(object sender, EventArgs e)
