@@ -40,7 +40,7 @@ namespace Calc
         private void Button1_Click(object sender, EventArgs e)
         {
             Clear();
-            if (label1.Text.Length != 0)
+            if (!label1.Text.Equals(""))
             {
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
@@ -57,7 +57,7 @@ namespace Calc
         {
             Clear();
             
-            if (label1.Text.Length != 0)
+            if (!label1.Text.Equals(""))
             {
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
@@ -73,7 +73,7 @@ namespace Calc
         private void Button3_Click(object sender, EventArgs e)
         {
             Clear();
-            if (label1.Text.Length != 0)
+            if (!label1.Text.Equals(""))
             {
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
@@ -89,7 +89,7 @@ namespace Calc
         private void Button4_Click(object sender, EventArgs e)
         {
             Clear();
-            if (label1.Text.Length != 0)
+            if (!label1.Text.Equals(""))
             {
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
@@ -105,7 +105,7 @@ namespace Calc
         private void Button5_Click(object sender, EventArgs e)
         {
             Clear();
-            if (label1.Text.Length != 0)
+            if (!label1.Text.Equals(""))
             {
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
@@ -121,7 +121,7 @@ namespace Calc
         private void Button6_Click(object sender, EventArgs e)
         {
             Clear();
-            if (label1.Text.Length != 0)
+            if (!label1.Text.Equals(""))
             {
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
@@ -137,7 +137,7 @@ namespace Calc
         private void Button7_Click(object sender, EventArgs e)
         {
             Clear();
-            if (label1.Text.Length != 0)
+            if (!label1.Text.Equals(""))
             {
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
@@ -153,7 +153,7 @@ namespace Calc
         private void Button8_Click(object sender, EventArgs e)
         {
             Clear();
-            if (label1.Text.Length != 0)
+            if (!label1.Text.Equals(""))
             {
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
@@ -192,7 +192,7 @@ namespace Calc
         private void Button11_Click(object sender, EventArgs e)
         {
             Clear();
-            if (label1.Text.Length == 0) return;
+            if (!label1.Text.Equals("")) return;
             if (!Check(label1.Text[label1.Text.Length - 1]))
             {
                 label1.Text += ")";
@@ -211,7 +211,7 @@ namespace Calc
         private void Button13_Click(object sender, EventArgs e)
         {
             Clear();
-            if (label1.Text.Length != 0)
+            if (!label1.Text.Equals(""))
             {
 
                 if (!Check(label1.Text[label1.Text.Length - 1]))
@@ -228,7 +228,7 @@ namespace Calc
         private void Button14_Click(object sender, EventArgs e)
         {
             Clear();
-            if (label1.Text.Length != 0)
+            if (!label1.Text.Equals(""))
             {
 
                 if (!Check(label1.Text[label1.Text.Length - 1]))
@@ -245,7 +245,7 @@ namespace Calc
         private void Button17_Click(object sender, EventArgs e)
         {
             Clear();
-            if (label1.Text.Length != 0)
+            if (!label1.Text.Equals(""))
             {
 
                 if (!Check(label1.Text[label1.Text.Length - 1]))
@@ -262,7 +262,7 @@ namespace Calc
         private void Button15_Click(object sender, EventArgs e)
         {
             Clear();
-            if (label1.Text.Length != 0)
+            if (!label1.Text.Equals(""))
             {
 
                 if (!Check(label1.Text[label1.Text.Length - 1]))
