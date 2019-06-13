@@ -17,6 +17,7 @@ namespace Calc
             InitializeComponent();
         }
 
+        private string work = "";
         private bool isCounting = false;
         private int open = 0;
         private int close = 0;
@@ -46,11 +47,13 @@ namespace Calc
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
                     label1.Text += "0";
+                    work += "0";
                 }
             }
             else
             {
                 label1.Text += "0";
+                work += "0";
             }
         }
 
@@ -62,12 +65,32 @@ namespace Calc
             {
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
+                    if (label1.Text[label1.Text.Length - 1] == '-')
+                    {
+                        bool u = false;
+                        for (int i = label1.Text[label1.Text.Length - 1]; i >= 0; i--)
+                        {
+                            if ("01234567".IndexOf(label1.Text[i]) == -1)
+                            {
+                                u = true;
+                            } 
+                        }
+
+                        if (u)
+                        {
+                            label1.Text += "1";
+                            work += "(0-1)";
+                        }
+                    }
+                    
                     label1.Text += "1";
+                    work += "1";
                 }
             }
             else
             {
                 label1.Text += "1";
+                work += "1";
             }
         }
 
@@ -78,12 +101,35 @@ namespace Calc
             {
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
-                    label1.Text += "2";
+                    if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
+                    {
+                        if (label1.Text[label1.Text.Length - 1] == '-')
+                        {
+                            bool u = false;
+                            for (int i = label1.Text[label1.Text.Length - 1]; i >= 0; i--)
+                            {
+                                if ("01234567".IndexOf(label1.Text[i]) == -1)
+                                {
+                                    u = true;
+                                } 
+                            }
+
+                            if (u)
+                            {
+                                label1.Text += "2";
+                                work += "(0-2)";
+                            }
+                        }
+                    
+                        label1.Text += "2";
+                        work += "2";
+                    }
                 }
             }
             else
             {
                 label1.Text += "2";
+                work += "2";
             }
         }
 
@@ -94,12 +140,35 @@ namespace Calc
             {
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
-                    label1.Text += "3";
+                    if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
+                    {
+                        if (label1.Text[label1.Text.Length - 1] == '-')
+                        {
+                            bool u = false;
+                            for (int i = label1.Text[label1.Text.Length - 1]; i >= 0; i--)
+                            {
+                                if ("01234567".IndexOf(label1.Text[i]) == -1)
+                                {
+                                    u = true;
+                                } 
+                            }
+
+                            if (u)
+                            {
+                                label1.Text += "3";
+                                work += "(0-3)";
+                            }
+                        }
+                    
+                        label1.Text += "3";
+                        work += "3";
+                    }
                 }
             }
             else
             {
                 label1.Text += "3";
+                work += "3";
             }
         }
 
@@ -110,12 +179,35 @@ namespace Calc
             {
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
-                    label1.Text += "4";
+                    if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
+                    {
+                        if (label1.Text[label1.Text.Length - 1] == '-')
+                        {
+                            bool u = false;
+                            for (int i = label1.Text[label1.Text.Length - 1]; i >= 0; i--)
+                            {
+                                if ("01234567".IndexOf(label1.Text[i]) == -1)
+                                {
+                                    u = true;
+                                } 
+                            }
+
+                            if (u)
+                            {
+                                label1.Text += "4";
+                                work += "(0-4)";
+                            }
+                        }
+                    
+                        label1.Text += "4";
+                        work += "4";
+                    }
                 }
             }
             else
             {
                 label1.Text += "4";
+                work += "4";
             }
         }
 
@@ -126,12 +218,35 @@ namespace Calc
             {
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
-                    label1.Text += "5";
+                    if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
+                    {
+                        if (label1.Text[label1.Text.Length - 1] == '-')
+                        {
+                            bool u = false;
+                            for (int i = label1.Text[label1.Text.Length - 1]; i >= 0; i--)
+                            {
+                                if ("01234567".IndexOf(label1.Text[i]) == -1)
+                                {
+                                    u = true;
+                                } 
+                            }
+
+                            if (u)
+                            {
+                                label1.Text += "5";
+                                work += "(0-5)";
+                            }
+                        }
+                    
+                        label1.Text += "5";
+                        work += "5";
+                    }
                 }
             }
             else
             {
                 label1.Text += "5";
+                work += "5";
             }
         }
 
@@ -142,12 +257,36 @@ namespace Calc
             {
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
-                    label1.Text += "6";
+                    if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
+                    {
+                        if (label1.Text[label1.Text.Length - 1] == '-')
+                        {
+                            bool u = false;
+                            for (int i = label1.Text[label1.Text.Length - 1]; i >= 0; i--)
+                            {
+                                if ("01234567".IndexOf(label1.Text[i]) == -1)
+                                {
+                                    u = true;
+                                    break;
+                                } 
+                            }
+
+                            if (u)
+                            {
+                                label1.Text += "6";
+                                work += "(0-6)";
+                            }
+                        }
+                    
+                        label1.Text += "6";
+                        work += "6";
+                    }
                 }
             }
             else
             {
                 label1.Text += "6";
+                work += "6";
             }
         }
 
@@ -158,12 +297,35 @@ namespace Calc
             {
                 if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
                 {
-                    label1.Text += "7";
+                    if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 && label1.Text[label1.Text.Length - 1] != '0')
+                    {
+                        if (label1.Text[label1.Text.Length - 1] == '-')
+                        {
+                            bool u = false;
+                            for (int i = label1.Text[label1.Text.Length - 1]; i >= 0; i--)
+                            {
+                                if ("01234567".IndexOf(label1.Text[i]) == -1)
+                                {
+                                    u = true;
+                                } 
+                            }
+
+                            if (u)
+                            {
+                                label1.Text += "7";
+                                work += "(0-7)";
+                            }
+                        }
+                    
+                        label1.Text += "7";
+                        work += "7";
+                    }
                 }
             }
             else
             {
                 label1.Text += "7";
+                work += "7";
             }
         }
 
@@ -171,6 +333,7 @@ namespace Calc
         {
             Clear();
             label1.Text = "";
+            work += "";
         }
 
         private void Button10_Click(object sender, EventArgs e)
@@ -182,12 +345,14 @@ namespace Calc
                     "01234567".IndexOf(label1.Text[label1.Text.Length - 1]) == -1)
                 {
                     label1.Text += "(";
+                    work += "(";
                     open++;
                 }
             }
             else
             {
                 label1.Text += "(";
+                work += "(";
                 open++;
             }
         }
@@ -200,6 +365,7 @@ namespace Calc
                 if (!Check(label1.Text[label1.Text.Length - 1]))
                 {
                     label1.Text += ")";
+                    work += ")";
                     close++;
                 }
             }
@@ -219,6 +385,7 @@ namespace Calc
                     close--;
                 }
                 label1.Text = label1.Text.Substring(0, label1.Text.Length - 1);
+                work = work.Substring(0, work.Length - 1);
             }
         }
 
@@ -231,6 +398,7 @@ namespace Calc
                 if (!Check(label1.Text[label1.Text.Length - 1]))
                 {
                     label1.Text += "*";
+                    work += "*";
                 }
             }
 //            else
@@ -248,6 +416,7 @@ namespace Calc
                 if (!Check(label1.Text[label1.Text.Length - 1]))
                 {
                     label1.Text += "/";
+                    work += "/";
                 }
             }
 //            else
@@ -265,6 +434,7 @@ namespace Calc
                 if (!Check(label1.Text[label1.Text.Length - 1]))
                 {
                     label1.Text += "+";
+                    work += "+";
                 }
             }
 //            else
@@ -282,7 +452,12 @@ namespace Calc
                 if (!Check(label1.Text[label1.Text.Length - 1]))
                 {
                     label1.Text += "-";
+                    work += "-";
                 }
+            }
+            else
+            {
+                label1.Text += "-";
             }
 //            else
 //            {
