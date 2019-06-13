@@ -192,10 +192,12 @@ namespace Calc
         private void Button11_Click(object sender, EventArgs e)
         {
             Clear();
-            if (!label1.Text.Equals("")) return;
-            if (!Check(label1.Text[label1.Text.Length - 1]))
+            if (!label1.Text.Equals("") || label1.Text.Length != 0)
             {
-                label1.Text += ")";
+                if (!Check(label1.Text[label1.Text.Length - 1]))
+                {
+                    label1.Text += ")";
+                }
             }
         }
 
@@ -219,10 +221,10 @@ namespace Calc
                     label1.Text += "*";
                 }
             }
-            else
-            {
-                label1.Text += "*";
-            }
+//            else
+//            {
+//                label1.Text += "*";
+//            }
         }
 
         private void Button14_Click(object sender, EventArgs e)
@@ -236,10 +238,10 @@ namespace Calc
                     label1.Text += "/";
                 }
             }
-            else
-            {
-                label1.Text += "/";
-            }
+//            else
+//            {
+//                label1.Text += "/";
+//            }
         }
 
         private void Button17_Click(object sender, EventArgs e)
@@ -253,10 +255,10 @@ namespace Calc
                     label1.Text += "+";
                 }
             }
-            else
-            {
-                label1.Text += "+";
-            }
+//            else
+//            {
+//                label1.Text += "+";
+//            }
         }
 
         private void Button15_Click(object sender, EventArgs e)
@@ -270,10 +272,10 @@ namespace Calc
                     label1.Text += "-";
                 }
             }
-            else
-            {
-                label1.Text += "-";
-            }
+//            else
+//            {
+//                label1.Text += "-";
+//            }
         }
 
         private void Button16_Click(object sender, EventArgs e)
