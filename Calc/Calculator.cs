@@ -18,6 +18,7 @@ namespace Calc
         }
 
         private bool isCounting = false;
+
         private void Clear()
         {
             if (isCounting)
@@ -26,57 +27,86 @@ namespace Calc
                 isCounting = false;
             }
         }
+
+        private static bool Check(char a)
+        {
+            return "+-/*(".IndexOf(a) != -1;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             Clear();
-            label1.Text += "0";
+            if (label1.Text[label1.Text.Length - 1] != ')')
+            {
+                label1.Text += "0";
+            }
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
             Clear();
-            label1.Text += "1";
+            if (label1.Text[label1.Text.Length - 1] != ')')
+            {
+                label1.Text += "1";
+            }
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
             Clear();
-            label1.Text += "2";
+            if (label1.Text[label1.Text.Length - 1] != ')')
+            {
+                label1.Text += "2";
+            }
         }
 
         private void Button4_Click(object sender, EventArgs e)
         {
             Clear();
-            label1.Text += "3";
+            if (label1.Text[label1.Text.Length - 1] != ')')
+            {
+                label1.Text += "3";
+            }
         }
 
         private void Button5_Click(object sender, EventArgs e)
         {
             Clear();
-            label1.Text += "4";
+            if (label1.Text[label1.Text.Length - 1] != ')')
+            {
+                label1.Text += "4";
+            }
         }
 
         private void Button6_Click(object sender, EventArgs e)
         {
             Clear();
-            label1.Text += "5";
+            if (label1.Text[label1.Text.Length - 1] != ')')
+            {
+                label1.Text += "5";
+            }
         }
 
         private void Button7_Click(object sender, EventArgs e)
         {
             Clear();
-            label1.Text += "6";
+            if (label1.Text[label1.Text.Length - 1] != ')')
+            {
+                label1.Text += "6";
+            }
         }
 
         private void Button8_Click(object sender, EventArgs e)
         {
             Clear();
-            label1.Text += "7";
+            if (label1.Text[label1.Text.Length - 1] != ')')
+            {
+                label1.Text += "7";
+            }
         }
 
         private void Button9_Click(object sender, EventArgs e)
@@ -88,13 +118,20 @@ namespace Calc
         private void Button10_Click(object sender, EventArgs e)
         {
             Clear();
-            label1.Text += "(";
+            if (label1.Text[label1.Text.Length - 1] != ')' &&
+                "01234567".IndexOf(label1.Text[label1.Text.Length - 1]) == -1)
+            {
+                label1.Text += "(";
+            }
         }
 
         private void Button11_Click(object sender, EventArgs e)
         {
             Clear();
-            label1.Text += ")";
+            if (!Check(label1.Text[label1.Text.Length - 1]))
+            {
+                label1.Text += ")";
+            }
         }
 
         private void Button12_Click(object sender, EventArgs e)
@@ -109,25 +146,37 @@ namespace Calc
         private void Button13_Click(object sender, EventArgs e)
         {
             Clear();
-            label1.Text += "*";
+            if (!Check(label1.Text[label1.Text.Length - 1]))
+            {
+                label1.Text += "*";
+            }
         }
 
         private void Button14_Click(object sender, EventArgs e)
         {
             Clear();
-            label1.Text += "/";
+            if (!Check(label1.Text[label1.Text.Length - 1]))
+            {
+                label1.Text += "/";
+            }
         }
 
         private void Button17_Click(object sender, EventArgs e)
         {
             Clear();
-            label1.Text += "+";
+            if (!Check(label1.Text[label1.Text.Length - 1]))
+            {
+                label1.Text += "+";
+            }
         }
 
         private void Button15_Click(object sender, EventArgs e)
         {
             Clear();
-            label1.Text += "-";
+            if (!Check(label1.Text[label1.Text.Length - 1]))
+            {
+                label1.Text += "-";
+            }
         }
 
         private void Button16_Click(object sender, EventArgs e)
@@ -137,7 +186,8 @@ namespace Calc
             {
                 var str = Calculate(label1.Text).ToString();
                 label1.Text = str;
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 label1.Text = "Ошибка!";
             }
