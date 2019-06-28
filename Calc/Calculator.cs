@@ -17,22 +17,16 @@ namespace Calc
         {
             InitializeComponent();
         }
-
-        private string work = "";
-        private bool isCounting = false;
-        private bool isUno = false;
-        private int open = 0;
-        private int close = 0;
+        
+        private bool _isCounting;
+        private int _open;
+        private int _close;
 
         private void Clear()
         {
-            if (isCounting)
-            {
-                label1.Text = "";
-                work = "";
-                isCounting = false;
-                isUno = false;
-            }
+            if (!_isCounting) return;
+            label1.Text = "";
+            _isCounting = false;
         }
 
         private static bool Check(char a)
@@ -49,44 +43,31 @@ namespace Calc
             Clear();
             if (!label1.Text.Equals(""))
             {
-                if (label1.Text[label1.Text.Length - 1] != ')' && label1.Text.Length != 0 &&
+                if (label1.Text[label1.Text.Length - 1] != ')' &&
                     label1.Text[label1.Text.Length - 1] != '0')
                 {
                     label1.Text += "0";
-                    work += "0";
                 }
             }
             else
             {
                 label1.Text += "0";
-                work += "0";
             }
         }
-
-        private int c;
 
         private void Button2_Click(object sender, EventArgs e)
         {
             Clear();
-
             if (!label1.Text.Equals("") || label1.Text.Length != 0)
             {
-                if (isUno)
+                if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
                 {
                     label1.Text += "1";
-                    work += "1)";
-                    isUno = false;
-                }
-                else if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
-                {
-                    label1.Text += "1";
-                    work += "1";
                 }
             }
             else
             {
-                label1.Text += "1";
-                work += "1";
+                label1.Text += "1"; 
             }
         }
 
@@ -95,22 +76,14 @@ namespace Calc
             Clear();
             if (!label1.Text.Equals("") || label1.Text.Length != 0)
             {
-                if (isUno)
+                if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
                 {
                     label1.Text += "2";
-                    work += "2)";
-                    isUno = false;
-                }
-                else if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
-                {
-                    label1.Text += "2";
-                    work += "2";
                 }
             }
             else
             {
                 label1.Text += "2";
-                work += "2";
             }
         }
 
@@ -119,22 +92,14 @@ namespace Calc
             Clear();
             if (!label1.Text.Equals("") || label1.Text.Length != 0)
             {
-                if (isUno)
+                if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
                 {
                     label1.Text += "3";
-                    work += "3)";
-                    isUno = false;
-                }
-                else if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
-                {
-                    label1.Text += "3";
-                    work += "3";
                 }
             }
             else
             {
                 label1.Text += "3";
-                work += "3";
             }
         }
 
@@ -143,22 +108,14 @@ namespace Calc
             Clear();
             if (!label1.Text.Equals("") || label1.Text.Length != 0)
             {
-                if (isUno)
+                if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
                 {
                     label1.Text += "4";
-                    work += "4)";
-                    isUno = false;
-                }
-                else if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
-                {
-                    label1.Text += "4";
-                    work += "4";
                 }
             }
             else
             {
                 label1.Text += "4";
-                work += "4";
             }
         }
 
@@ -167,22 +124,14 @@ namespace Calc
             Clear();
             if (!label1.Text.Equals("") || label1.Text.Length != 0)
             {
-                if (isUno)
+                if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
                 {
                     label1.Text += "5";
-                    work += "5)";
-                    isUno = false;
-                }
-                else if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
-                {
-                    label1.Text += "5";
-                    work += "5";
                 }
             }
             else
             {
                 label1.Text += "5";
-                work += "5";
             }
         }
 
@@ -191,22 +140,14 @@ namespace Calc
             Clear();
             if (!label1.Text.Equals("") || label1.Text.Length != 0)
             {
-                if (isUno)
+                if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
                 {
                     label1.Text += "6";
-                    work += "6)";
-                    isUno = false;
-                }
-                else if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
-                {
-                    label1.Text += "6";
-                    work += "6";
                 }
             }
             else
             {
                 label1.Text += "6";
-                work += "6";
             }
         }
 
@@ -215,33 +156,23 @@ namespace Calc
             Clear();
             if (!label1.Text.Equals("") || label1.Text.Length != 0)
             {
-                if (isUno)
+                if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
                 {
                     label1.Text += "7";
-                    work += "7)";
-                    isUno = false;
-                }
-                else if (label1.Text[label1.Text.Length - 1] != ')' || label1.Text[label1.Text.Length - 1] != '0')
-                {
-                    label1.Text += "7";
-                    work += "7";
                 }
             }
             else
             {
                 label1.Text += "7";
-                work += "7";
             }
         }
 
         private void Button9_Click(object sender, EventArgs e)
         {
             Clear();
-            isUno = false;
             label1.Text = "";
-            work = "";
-            open = 0;
-            close = 0;
+            _open = 0;
+            _close = 0;
         }
 
         private void Button10_Click(object sender, EventArgs e)
@@ -249,127 +180,72 @@ namespace Calc
             Clear();
             if (label1.Text.Length != 0)
             {
-                if (label1.Text[label1.Text.Length - 1] != ')' &&
-                    "01234567".IndexOf(label1.Text[label1.Text.Length - 1]) == -1)
-                {
-                    if (label1.Text[label1.Text.Length - 1] == '-' && work.Length == 3)
-                    {
-                        label1.Text += "(";
-                        work = "0-1*(";
-                        isUno = false;
-
-                        open++;
-                    }
-
-                    else if (label1.Text[label1.Text.Length - 1] == '-')
-                    {
-                        label1.Text += "(";
-                        work += "1*(";
-                        isUno = false;
-                        open++;
-                    }
-                    else
-                    {
-                        label1.Text += "(";
-                        work += "(";
-                        open++;
-                    }
-                }
+                if (label1.Text[label1.Text.Length - 1] == ')' ||
+                    "01234567".IndexOf(label1.Text[label1.Text.Length - 1]) != -1) return;
+                label1.Text += "(";
+                _open++;
             }
             else
             {
                 label1.Text += "(";
-                work += "(";
-                open++;
+                _open++;
             }
         }
 
         private void Button11_Click(object sender, EventArgs e)
         {
             Clear();
-            if (!label1.Text.Equals("") && label1.Text.Length != 0)
-            {
-                if (!Check(label1.Text[label1.Text.Length - 1]))
-                {
-                    label1.Text += ")";
-                    work += ")";
-                    close++;
-                }
-            }
+            if (label1.Text.Equals("") || label1.Text.Length == 0) return;
+            if (Check(label1.Text[label1.Text.Length - 1])) return;
+            label1.Text += ")";
+            _close++;
         }
 
         private void Button12_Click(object sender, EventArgs e)
         {
             Clear();
-            if (label1.Text.Length != 0)
+            if (label1.Text.Length == 0) return;
+            if (label1.Text[label1.Text.Length - 1] == '(')
             {
-                if (label1.Text[label1.Text.Length - 1] == '(')
-                {
-                    open--;
-                }
-
-                if (label1.Text[label1.Text.Length - 1] == ')')
-                {
-                    close--;
-                }
-
-                label1.Text = label1.Text.Substring(0, label1.Text.Length - 1);
-                work = work.Substring(0, work.Length - 1);
+                _open--;
             }
+
+            if (label1.Text[label1.Text.Length - 1] == ')')
+            {
+                _close--;
+            }
+
+            label1.Text = label1.Text.Substring(0, label1.Text.Length - 1);
         }
 
         private void Button13_Click(object sender, EventArgs e)
         {
             Clear();
-            if (!label1.Text.Equals(""))
+            if (label1.Text.Equals("")) return;
+            if (!Check(label1.Text[label1.Text.Length - 1]))
             {
-                if (!Check(label1.Text[label1.Text.Length - 1]))
-                {
-                    label1.Text += "*";
-                    work += "*";
-                }
+                label1.Text += "*";
             }
-
-//            else
-//            {
-//                label1.Text += "*";
-//            }
         }
 
         private void Button14_Click(object sender, EventArgs e)
         {
             Clear();
-            if (!label1.Text.Equals(""))
+            if (label1.Text.Equals("")) return;
+            if (!Check(label1.Text[label1.Text.Length - 1]))
             {
-                if (!Check(label1.Text[label1.Text.Length - 1]))
-                {
-                    label1.Text += "/";
-                    work += "/";
-                }
+                label1.Text += "/";
             }
-
-//            else
-//            {
-//                label1.Text += "/";
-//            }
         }
 
         private void Button17_Click(object sender, EventArgs e)
         {
             Clear();
-            if (!label1.Text.Equals(""))
+            if (label1.Text.Equals("")) return;
+            if (!Check(label1.Text[label1.Text.Length - 1]))
             {
-                if (!Check(label1.Text[label1.Text.Length - 1]))
-                {
-                    label1.Text += "+";
-                    work += "+";
-                }
+                label1.Text += "+";
             }
-
-//            else
-//            {
-//                label1.Text += "+";
-//            }
         }
 
         private void Button15_Click(object sender, EventArgs e)
@@ -379,50 +255,32 @@ namespace Calc
             {
                 if ("+-/*".IndexOf(label1.Text[label1.Text.Length - 1]) == -1)
                 {
-                    if (label1.Text[label1.Text.Length - 1] == '(')
-                    {
-                        label1.Text += "-";
-                        work += "(0-";
-                        isUno = true;
-                    }
-                    else
-                    {
-                        label1.Text += "-";
-                        work += "-";
-                    }
+                    label1.Text += "-";
                 }
             }
             else
             {
                 label1.Text += "-";
-                work += "(0-";
-                isUno = true;
             }
         }
 
         private void Button16_Click(object sender, EventArgs e)
         {
-            if (!label1.Text.Equals("") && open == close)
+            if (label1.Text.Equals("") || _open != _close) return;
+            if (Check(label1.Text[label1.Text.Length - 1])) return;
+            _isCounting = true;
+            try
             {
-                if (!Check(label1.Text[label1.Text.Length - 1]))
-                {
-                    isCounting = true;
-                    try
-                    {
-                        var str = Calculate(work).ToString();
-                        label1.Text = str;
-                        work = "";
-                        open = 0;
-                        close = 0;
-                    }
-                    catch (Exception ex)
-                    {
-                        label1.Text = "Ошибка!";
-                        open = 0;
-                        close = 0;
-                        work = "";
-                    }
-                }
+                var str = Calculate(label1.Text).ToString();
+                label1.Text = str;
+                _open = 0;
+                _close = 0;
+            }
+            catch (Exception ex)
+            {
+                label1.Text = "Ошибка!";
+                _open = 0;
+                _close = 0;
             }
         }
 
@@ -452,11 +310,49 @@ namespace Calc
 
         private static double Calculate(string input)
         {
-            var output = GetExpression(input);
+            var output = GetExpression(Formating(input));
             var result = Counting(output);
             return result;
         }
+        
+        private static string Formating(string str)
+        {
+            var result = "";
 
+            var check = false;
+            for (var i = 0; i < str.Length; i++)
+            {
+                if (str[0] == '-' && i == 0)
+                {
+                    if (str[1] == '(')
+                    { 
+                        result += "0-";
+                        continue;
+                    }
+
+                    result += "(0-";
+                    check = true;
+                    continue;
+                }
+
+                if (str[i] == '-' && str[i-1] == '(')
+                {
+                    result += "0";
+                }
+
+                if (check && IsOperator(str[i]))
+                {
+                    result += ")" + str[i];
+                    check = false;
+                }
+                else
+                {
+                    result += str[i];
+                }
+            }
+
+            return result;
+        }
         private static string GetExpression(string input)
         {
             var output = string.Empty;
