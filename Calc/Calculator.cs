@@ -345,6 +345,10 @@ namespace Calc
                     result += ")" + str[i];
                     check = false;
                 }
+                else if (check && i == str.Length - 1)
+                {
+                    result += str[i] + ")";
+                }
                 else
                 {
                     result += str[i];
