@@ -18,3 +18,13 @@ C:/Users/User/Desktop/Calc/Calc/obj/Debug/Calc.Calculator.resources
 /Users/sergejmurskij/Desktop/Calc/Calc/obj/Debug/Calc.csproj.CoreCompileInputs.cache
 /Users/sergejmurskij/Desktop/Calc/Calc/obj/Debug/Calc.exe
 /Users/sergejmurskij/Desktop/Calc/Calc/obj/Debug/Calc.pdb
+/Users/sergejmurskij/Desktop/Documents/RiderProjects/Calculator/Calc/bin/Debug/Calc.exe.config
+/Users/sergejmurskij/Desktop/Documents/RiderProjects/Calculator/Calc/bin/Debug/Calc.exe
+/Users/sergejmurskij/Desktop/Documents/RiderProjects/Calculator/Calc/bin/Debug/Calc.pdb
+/Users/sergejmurskij/Desktop/Documents/RiderProjects/Calculator/Calc/obj/Debug/Calc.csprojAssemblyReference.cache
+/Users/sergejmurskij/Desktop/Documents/RiderProjects/Calculator/Calc/obj/Debug/Calc.Calculator.resources
+/Users/sergejmurskij/Desktop/Documents/RiderProjects/Calculator/Calc/obj/Debug/Calc.Properties.Resources.resources
+/Users/sergejmurskij/Desktop/Documents/RiderProjects/Calculator/Calc/obj/Debug/Calc.csproj.GenerateResource.cache
+/Users/sergejmurskij/Desktop/Documents/RiderProjects/Calculator/Calc/obj/Debug/Calc.csproj.CoreCompileInputs.cache
+/Users/sergejmurskij/Desktop/Documents/RiderProjects/Calculator/Calc/obj/Debug/Calc.exe
+/Users/sergejmurskij/Desktop/Documents/RiderProjects/Calculator/Calc/obj/Debug/Calc.pdb
